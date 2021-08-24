@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="d1">
+        <div></div>
+    </div>
+    <div class="bg"></div>
+    <div id="d2">
+        <div></div>
+    </div>
+
+    <style>
+        body {
+            background-color: #191919;
+            position: relative;
+        }
+
+        #d1 {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            border: 12px solid #E08027;
+            position: absolute;
+            border-radius: 70px;
+            top: 69px;
+            left: 83px;
+        }
+
+        #d1>div {
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 50px solid #E08027;
+            border-right: 50px solid transparent;
+            top: -12px;
+            left: -12px;
+            position: absolute;
+        }
+
+        #d1:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: -31px;
+            bottom: -32px;
+            border-width: 0;
+            background: #E08027;
+            width: 50px;
+            height: 50px;
+            transform: rotate(45deg);
+        }
+
+        #d1:after {
+            content: "";
+            display: inline-block;
+            height: 5px;
+            width: 10px;
+            border-top: 10px solid #E08027;
+            border-left: 10px solid #E08027;
+            border-right: 10px solid #E08027;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            position: relative;
+            top: 35px;
+            left: 28px;
+
+        }
+
+        #d2 {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            border: 12px solid #E08027;
+            position: absolute;
+            border-radius: 70px;
+            top: 69px;
+            right: 83px;
+            transform: scaleX(-1);
+            z-index: 999;
+
+        }
+
+        #d2>div {
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 50px solid #E08027;
+            border-right: 50px solid transparent;
+            top: -12px;
+            left: -12px;
+            position: absolute;
+        }
+
+        .bg {
+            display: inline-block;
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border: 23px solid #191919;
+            position: absolute;
+            border-radius: 70px;
+            top: 58px;
+            right: 70px;
+            z-index: 1;
+
+        }
+
+        #d2:after {
+            content: "";
+            display: inline-block;
+            height: 5px;
+            width: 12px;
+            border-top: 10px solid #E08027;
+            border-left: 10px solid #E08027;
+            border-right: 10px solid #E08027;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            position: relative;
+            top: 35px;
+            left: 28px;
+
+        }
+    </style>
+</body>
+
+</html>
